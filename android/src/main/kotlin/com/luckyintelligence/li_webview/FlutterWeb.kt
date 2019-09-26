@@ -51,9 +51,16 @@ public class FlutterWeb : PlatformView, MethodCallHandler {
     }
 
     private fun getWebView(registrar : Registrar) : WebView {
-        val webView : WebView = WebView(registrar.context())
+        val webView : WebView = WebView(registrar.context());        
+        val settings : WebSettings = webView.getSettings();
+
         webView.setWebViewClient(WebViewClient())
-        webView.getSettings().javaScriptEnabled = true
+        settings.setDomStorageEnabled(true);
+        settings.setJavaScriptEnabled(true);
+        settings.setSupportMultipleWindows(true);
+        settings.setJavaScriptCanOpenWindowsAutomatically(true);
+        settings.setAllowFileAccess(true);
+        settings.setAllowContentAccess(true);
         return webView
     }
 
