@@ -11,6 +11,6 @@
 @implementation LiWebviewPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
 
-  [registrar registerViewFactory: [[WebViewFactory alloc] initWithMessenger:[registrar messenger]] withId:@"li_webview"];
+    [registrar registerViewFactory: [[WebViewFactory alloc] initWithMessenger:[registrar messenger]] withId:@"li_webview"];
 }
 @end
