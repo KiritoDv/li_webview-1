@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.webkit.WebSettings
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
